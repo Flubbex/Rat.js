@@ -63,7 +63,8 @@ Rat.Image.prototype.draw = function(ctx) {
     else {
         if (!this.style.subrect)
             ctx.drawImage(this.opt,
-                0, 0,
+                this.style.position ? this.style.position.x : 0,
+                this.style.position ? this.style.position.y : 0,
                 this.style.width || this.opt.width,
                 this.style.height || this.opt.height);
         else
@@ -71,7 +72,8 @@ Rat.Image.prototype.draw = function(ctx) {
                 this.style.subrect.x, this.style.subrect.y,
                 this.style.subrect.width,
                 this.style.subrect.height,
-                0, 0,
+                this.style.position ? this.style.position.x : 0,
+                this.style.position ? this.style.position.y : 0,
                 this.style.width || this.opt.width,
                 this.style.height || this.opt.height);
     }

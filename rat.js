@@ -57,7 +57,6 @@ Rat.Image = function(opt, style, context) {
     Rat.init(this, arguments);
 };
 Rat.Image.prototype.draw = function(ctx) {
-    console.log(this)
     Rat.style(ctx, this.style);
     if (this.style.crop)
         ctx.drawImage.apply(ctx, [this.opt, 0, 0].concat(this.style.crop));
